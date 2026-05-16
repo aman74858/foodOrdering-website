@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodOrdering — Order Food Online</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">FoodOrdering</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Menu</a>
+      <a href="cart.html" class="nav-link cart-link">
+        <i class="fas fa-shopping-cart"></i> Cart
+        <span id="cart-count"></span>
+      </a>
+      <a href="admin.html" id="nav-admin-btn" class="nav-admin-btn"> <i class="fas fa-user-lock"></i> Admin Login</a>
+    </div>
+  </nav>
+  <script>
+    (function(){
+      const btn = document.getElementById('nav-admin-btn');
+      if(localStorage.getItem('adminLoggedIn')==='true'){
+        btn.href = 'admin-dashboard.html';
+        btn.textContent = '⚙ Dashboard';
+        btn.classList.add('logged-in');
+      }
+    })();
+  </script>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <span class="hero-eyebrow">Fast · Fresh · Flavourful</span>
+    <h1>Cravings Delivered<br><span>Hot & Fast</span></h1>
+    <p>Browse our handpicked menu, add to cart, and get restaurant-quality food delivered straight to you.</p>
+    <a href="#menu" class="hero-cta">Browse Menu ↓</a>
+  </section>
+
+  <!-- ── MENU ── -->
+  <section class="menu-section" id="menu">
+    <div class="section-header">
+      <h2 class="section-title">Our <span>Menu</span></h2>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input id="search-input" type="text" class="search-input" placeholder="Search food…" />
+      </div>
+    </div>
+
+    <!-- Filter pills -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="All">All</button>
+      <button class="filter-btn" data-filter="Burgers">Burgers</button>
+      <button class="filter-btn" data-filter="Pizza">Pizza</button>
+      <button class="filter-btn" data-filter="Rice">Rice</button>
+      <button class="filter-btn" data-filter="Snacks">Snacks</button>
+      <button class="filter-btn" data-filter="Grills">Grills</button>
+      <button class="filter-btn" data-filter="Drinks">Drinks</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="food-grid" id="food-grid"></div>
+  </section>
+
+
+  <!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-box">
+      <h2 class="footer-logo">FoodOrdering</h2>
+      <p class="footer-text">
+        Delicious food delivered hot & fresh to your doorstep.
+        Fast service, amazing taste, and unforgettable experience.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h3 class="footer-title">Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-box">
+      <h3 class="footer-title">Contact</h3>
+      <p><i class="fas fa-map-marker-alt"></i>  Ranchi, Jharkhand</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fas fa-envelope"></i> support@foodordering.com</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-box">
+      <h3 class="footer-title">Follow Us</h3>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 FoodOrdering. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

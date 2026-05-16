@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login — FoodOrdering</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">FoodOrdering</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Menu</a>
+      <a href="cart.html" class="nav-link cart-link active"><i class="fas fa-shopping-cart"></i> Cart</a>
+      <a href="admin.html" id="nav-admin-btn" class="nav-admin-btn"><i class="fas fa-user-lock"></i> Admin Login</a>
+    </div>
+  </nav>
+
+  <div class="admin-login-page">
+    <div class="login-card">
+      <div class="login-logo"><i class="fas fa-user-lock"></i> FoodOrdering</div>
+      <p class="login-sub">Admin Portal — sign in to manage your menu</p>
+
+      <div class="error-msg" id="login-error"></div>
+
+      <form id="login-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="username">Username</label>
+          <input id="username" class="form-control" type="text" placeholder="admin" autocomplete="username" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <div class="pw-wrap">
+            <input id="password" class="form-control" type="password" placeholder="••••••••" autocomplete="current-password" required />
+            <button type="button" id="toggle-pw">👁</button>
+          </div>
+        </div>
+        <button type="submit" class="login-btn">Sign In →</button>
+      </form>
+
+      <p style="margin-top:20px;color:var(--muted);font-size:.78rem;text-align:center;">
+        Demo credentials: <strong style="color:var(--text)">admin</strong> / <strong style="color:var(--text)">admin123</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-box">
+      <h2 class="footer-logo">FoodOrdering</h2>
+      <p class="footer-text">
+        Delicious food delivered hot & fresh to your doorstep.
+        Fast service, amazing taste, and unforgettable experience.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h3 class="footer-title">Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-box">
+      <h3 class="footer-title">Contact</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Ranchi, Jharkhand</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fas fa-envelope"></i> support@foodordering.com</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-box">
+      <h3 class="footer-title">Follow Us</h3>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 FoodOrdering. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
